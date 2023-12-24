@@ -1,0 +1,62 @@
+/* ============================================================== */
+/* ======================== Skills Setup ======================== */
+/* ============================================================== */
+
+.our-skills {
+    padding-top: calc(var(--main-padding));
+    padding-bottom: calc(var(--main-padding));
+    position: relative;
+}
+
+.our-skills .container {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.our-skills .container img {
+    margin-top: 60px;
+    width: 550px;
+    border-radius: 10px;
+}
+
+.our-skills .skills {
+    flex: 1;
+}
+
+.our-skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--second-color);
+}
+
+.our-skills .skill h3 span {
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid var(--second-color);
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.our-skills .skill .progress {
+    background-color: var(--forth-color);
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.our-skills .skill .progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--first-color);
+    border-radius: 5px 0 0 5px;
+}
+
+@media (max-width: 991px) {
+    .our-skills .container img {
+        display: none;
+    }
+}

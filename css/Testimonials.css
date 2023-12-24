@@ -1,0 +1,76 @@
+/* ============================================================== */
+/* ===================== Testimonial Section ==================== */
+/* ============================================================== */
+
+.testimonials {
+    padding-top: calc(var(--main-padding));
+    padding-bottom: calc(var(--main-padding));
+    position: relative;
+}
+
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonials .box {
+    background-color: var(--second-color);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.testimonials .box:hover {
+    box-shadow: var(--second-box-shadow);
+    transform: translateY(-10px);
+}
+
+.testimonials .box img {
+    position: absolute;
+    width: 100px;
+    right: -10px;
+    top: -50px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    border: 10px solid var(--light-color);
+    transition: var(--main-transition);
+}
+
+.testimonials .box:hover img {
+    top: -60px;
+}
+
+.testimonials .box h3 {
+    color: var(--light-color);
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0 0 20px;
+}
+
+.testimonials .box .title {
+    color: var(--second-color);
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.testimonials .box .rate {
+    background-color: var(--first-color);
+    padding: 15px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+
+.testimonials .box .rate {
+    color: var(--second-color);
+}
+
+.testimonials .box p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.6;
+    color: var(--light-color);
+}

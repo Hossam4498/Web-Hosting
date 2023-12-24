@@ -1,0 +1,146 @@
+/* ============================================================== */
+/* ======================= Pricing Section ====================== */
+/* ============================================================== */
+
+.pricing {
+    padding-top: calc(var(--main-padding));
+    padding-bottom: calc(var(--main-padding));
+    position: relative;
+}
+
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.pricing .box {
+    background-color: var(--light-color);
+    box-shadow: var(--second-box-shadow);
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--main-transition);
+    position: relative;
+}
+
+.pricing .box.popular .label {
+    position: absolute;
+    right: 20px;
+    width: fit-content;
+    padding: 10px 10px 40px;
+
+    background-color: var(--first-color);
+    color: var(--light-color);
+    writing-mode: vertical-lr;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.pricing .box.popular .label::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-color: transparent transparent var(--light-color) transparent;
+    border-width: 20px;
+}
+
+.pricing .box .title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--second-color)
+}
+
+.pricing .box img {
+    width: 128px;
+    margin-bottom: 30px;
+}
+
+.pricing .box .cost {
+    margin-bottom: 20px;
+}
+
+.pricing .box .cost .amount {
+    display: block;
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--second-color);
+}
+
+.pricing .box .cost .time {
+    color: var(--first-color);
+}
+
+.pricing .box ul {
+    text-align: left;
+    padding: 0;
+}
+
+.pricing .box ul li {
+    border-top: 1px solid var(--forth-color);
+    padding: 20px
+}
+
+.pricing .box ul li:before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 800;
+    content: "\f00c";
+    color: var(--second-color);
+    margin-right: 10px;
+}
+
+.pricing .box a {
+    border: 2px solid var(--second-color);
+    color: var(--second-color);
+    font-weight: 800;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 10px;
+    font-size: 18px;
+    position: relative;
+    transition: var(--main-transition);
+    z-index: 10;
+}
+
+.pricing .box a:hover {
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.pricing .box a::before {
+    content: "";
+    background-color: var(--second-color);
+    box-shadow: var(--second-box-shadow);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.pricing .box a::after {
+    content: "";
+    background-color: var(--second-color);
+    box-shadow: var(--second-box-shadow);
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.pricing .box a:hover::before {
+    animation: left-move var(--main-transition) linear forwards;
+    z-index: -1;
+}
+
+.pricing .box a:hover::after {
+    animation: right-move var(--main-transition) linear forwards;
+    z-index: -1;
+}

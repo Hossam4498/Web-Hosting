@@ -1,0 +1,35 @@
+/* ============================================================== */
+/* ======================= Gallery Section ====================== */
+/* ============================================================== */
+
+.gallery {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+}
+
+.gallery .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.gallery .box .image {
+    background-color: var(--second-color);
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    position: relative;
+}
+
+.gallery .box .image:hover {
+    box-shadow: var(--second-box-shadow);
+    transform: translateY(-10px);
+}
+
+.gallery .box .image img {
+    height: 100%;
+    border-radius: 10px;
+}

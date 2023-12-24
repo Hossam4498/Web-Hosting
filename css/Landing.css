@@ -1,0 +1,104 @@
+/* ============================================================== */
+/* ======================= Landing Section ====================== */
+/* ============================================================== */
+
+.landing {
+    position: relative;
+    box-shadow: var(--light-box-shadow);
+}
+
+.landing .container {
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+.landing .text {
+    flex: 1;
+    margin-bottom: 120px;
+}
+
+.landing .text h1 {
+    font-size: 40px;
+    color: var(--second-color);
+}
+
+.landing .text p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--second-color);
+    max-width: 500px;
+}
+
+.landing .image img {
+    width: 600px;
+    margin-bottom: 120px;
+    position: relative;
+    animation: up-down 5s linear infinite;
+}
+
+.landing .go-down {
+    position: absolute;
+    color: var(--second-color);
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+}
+
+.landing .go-down:hover {
+    color: var(--third-color);
+}
+
+.landing .go-down i {
+    animation: bouncing 1.5s infinite;
+}
+
+/* Up and Down Animation */
+@keyframes up-down {
+    0%, 100% {
+        top: 0;
+    }
+
+    50% {
+        top: -50px;
+    }
+}
+
+@keyframes bouncing {
+    0%, 10%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40%, 60% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ============================================================== */
+/* ======================= Landing Section ====================== */
+/* ============================================================== */
+
+@media (max-width: 767px) {
+    .landing .text h1 {
+        font-size: 28px;
+    }
+
+    .landing .text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .landing .image img {
+        display: none;
+    }
+
+    .landing .text {
+        text-align: center;
+    }
+
+    .landing .text p {
+        margin: auto;
+    }
+}

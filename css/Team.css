@@ -1,0 +1,109 @@
+/* ============================================================== */
+/* ======================== Team Section ======================== */
+/* ============================================================== */
+
+.team {
+    padding-top: calc(var(--main-padding));
+    padding-bottom: calc(var(--main-padding));
+    position: relative;
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.team .box {
+    position: relative;
+    width: 100%;
+}
+
+.team .box::before {
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: calc(100% - 60px);
+    border-radius: 10px;
+    z-index: -2;
+    transition: var(--main-transition);
+}
+
+.team .box:hover::before {
+    box-shadow: var(--second-box-shadow);
+}
+
+.team .box:hover::after {
+    width: calc(100% - 60px);
+}
+
+.team .box .data {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 0;
+}
+
+.team .box .data img {
+    height: 400px;
+    width: calc(350px - 30px);
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--second-box-shadow);
+    transition: var(--main-transition);
+}
+
+.team .box:hover .data img {
+    border-color: var(--third-color);
+}
+
+.team .box .data .social {
+    display: flex;
+    flex-direction: column;
+}
+
+.team .box .data .social i {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: -20px;
+    background-color: var(--first-color);
+    color: var(--second-color);
+    box-shadow: var(--second-box-shadow) inset;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    transition: var(--main-transition);
+}
+
+.team .box .data .social i:hover {
+    width: 50px;
+    height: 50px;
+}
+
+.team .box:hover .data .social i {
+    background-color: var(--first-color);
+    color: var(--second-color);
+}
+
+.team .info {
+    padding-left: 80px;
+}
+
+.team .info h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 20px 0 0;
+    color: var(--light-color);
+    transition: var(--main-transition);
+}
+
+.team .info p {
+    font-size: 18px;
+    color: var(--light-color);
+    transition: var(--main-transition);
+}
